@@ -194,10 +194,10 @@ importers:
         version: 22.10.1
       '@vercel/analytics':
         specifier: ^1.4.1
-        version: 1.5.0(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
+        version: 1.5.0(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
       '@vercel/speed-insights':
         specifier: ^1.0.12
-        version: 1.2.0(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
+        version: 1.2.0(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
       aos:
         specifier: ^3.0.0-beta.6
         version: 3.0.0-beta.6
@@ -218,16 +218,16 @@ importers:
         version: 10.18.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       geist:
         specifier: ^1.3.1
-        version: 1.4.2(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))
+        version: 1.4.2(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))
       lucide-react:
         specifier: ^0.461.0
         version: 0.461.0(react@18.2.0)
       next:
         specifier: 15.0.4
-        version: 15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)
+        version: 15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)
       next-contentlayer:
         specifier: ^0.3.4
-        version: 0.3.4(contentlayer@0.3.4(esbuild@0.25.4))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.3.4(contentlayer@0.3.4(esbuild@0.25.4))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.2.65)(acorn@8.14.0)(react@18.2.0)
@@ -236,7 +236,7 @@ importers:
         version: 0.4.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       nuqs:
         specifier: ^2.4.0
-        version: 2.4.3(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-router-dom@6.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-router@6.3.0(react@18.2.0))(react@18.2.0)
+        version: 2.4.3(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-router-dom@6.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-router@6.3.0(react@18.2.0))(react@18.2.0)
       posthog-js:
         specifier: ^1.194.5
         version: 1.249.0
@@ -294,7 +294,7 @@ importers:
         version: 8.6.14(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))
       '@storybook/nextjs':
         specifier: ^8.4.5
-        version: 8.6.14(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(type-fest@4.40.1)(typescript@5.8.3)(webpack-dev-server@4.15.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)))(webpack-hot-middleware@2.26.1)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4))
+        version: 8.6.14(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(type-fest@4.40.1)(typescript@5.8.3)(webpack-dev-server@4.15.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)))(webpack-hot-middleware@2.26.1)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4))
       '@storybook/react':
         specifier: ^8.4.5
         version: 8.6.14(@storybook/test@8.6.14(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(typescript@5.8.3)
@@ -1004,10 +1004,10 @@ importers:
         version: 22.10.1
       '@vercel/analytics':
         specifier: ^1.4.1
-        version: 1.5.0(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
+        version: 1.5.0(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
       '@vercel/speed-insights':
         specifier: ^1.0.12
-        version: 1.2.0(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
+        version: 1.2.0(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react@18.2.0)(svelte@4.2.18)(vue@3.4.31(typescript@5.8.3))
       aos:
         specifier: ^3.0.0-beta.6
         version: 3.0.0-beta.6
@@ -1028,16 +1028,16 @@ importers:
         version: 10.18.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       geist:
         specifier: ^1.3.1
-        version: 1.4.2(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))
+        version: 1.4.2(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))
       lucide-react:
         specifier: ^0.461.0
         version: 0.461.0(react@18.2.0)
       next:
         specifier: 15.0.4
-        version: 15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)
+        version: 15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)
       next-contentlayer:
         specifier: ^0.3.4
-        version: 0.3.4(contentlayer@0.3.4(esbuild@0.25.4))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 0.3.4(contentlayer@0.3.4(esbuild@0.25.4))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.2.65)(acorn@8.14.0)(react@18.2.0)
@@ -1046,7 +1046,7 @@ importers:
         version: 0.4.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       nuqs:
         specifier: ^2.4.0
-        version: 2.4.3(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-router-dom@6.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-router@6.3.0(react@18.2.0))(react@18.2.0)
+        version: 2.4.3(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-router-dom@6.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-router@6.3.0(react@18.2.0))(react@18.2.0)
       posthog-js:
         specifier: ^1.194.5
         version: 1.249.0
@@ -1104,7 +1104,7 @@ importers:
         version: 8.6.14(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))
       '@storybook/nextjs':
         specifier: ^8.4.5
-        version: 8.6.14(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.24.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(type-fest@4.40.1)(typescript@5.8.3)(webpack-dev-server@4.15.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)))(webpack-hot-middleware@2.26.1)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4))
+        version: 8.6.14(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)(next@15.0.4(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.71.1)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(type-fest@4.40.1)(typescript@5.8.3)(webpack-dev-server@4.15.1(bufferutil@4.0.8)(utf-8-validate@6.0.4)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4)))(webpack-hot-middleware@2.26.1)(webpack@5.90.3(@swc/core@1.4.6(@swc/helpers@0.5.17))(esbuild@0.25.4))
       '@storybook/react':
         specifier: ^8.4.5
         version: 8.6.14(@storybook/test@8.6.14(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.14(bufferutil@4.0.8)(prettier@3.5.3)(utf-8-validate@6.0.4))(typescript@5.8.3)
@@ -1180,6 +1180,40 @@ importers:
       wrangler:
         specifier: ^4.18.0
         version: 4.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4)
+
+  database/prisma-oppulence-developer:
+    dependencies:
+      '@planetscale/database':
+        specifier: ^1.18.0
+        version: 1.19.0
+      '@prisma/adapter-planetscale':
+        specifier: ^5.18.0
+        version: 5.22.0(@planetscale/database@1.19.0)
+      '@prisma/client':
+        specifier: 5.18.0
+        version: 5.18.0(prisma@5.18.0)
+      decimal.js:
+        specifier: ^10.4.3
+        version: 10.4.3
+      zod:
+        specifier: ^3.24.1
+        version: 3.25.32
+      zod-prisma-types:
+        specifier: ^3.2.1
+        version: 3.2.4(@prisma/client@5.18.0(prisma@5.18.0))(prisma@5.18.0)
+    devDependencies:
+      '@types/node':
+        specifier: 18.11.9
+        version: 18.11.9
+      prisma:
+        specifier: 5.18.0
+        version: 5.18.0
+      tsx:
+        specifier: ^4.11.0
+        version: 4.19.4
+      typescript:
+        specifier: 5.2.2
+        version: 5.2.2
 
   packages/api-documentation:
     dependencies:
@@ -1273,7 +1307,7 @@ importers:
         version: 0.0.7(encoding@0.1.13)(openai@4.96.0(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.25.32))
       '@langchain/community':
         specifier: ^0.3.29
-        version: 0.3.40(2xqkiqhifqtacwfntm3stkp2ay)
+        version: 0.3.40(o4yx6dpv2k5euua7hoi4wtyk4m)
       '@langchain/core':
         specifier: 0.3.37
         version: 0.3.37(openai@4.96.0(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.25.32))
@@ -1318,7 +1352,7 @@ importers:
         version: 0.0.1(@langchain/core@0.3.37(openai@4.96.0(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.25.32)))(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))
       '@mem0/community':
         specifier: ^0.0.1
-        version: 0.0.1(aiukvfwwsxi7s34n474l4dimlm)
+        version: 0.0.1(2pd22pmynpbk2l3k2pku75znta)
       '@mendable/firecrawl-js':
         specifier: ^1.18.2
         version: 1.25.1
@@ -7721,6 +7755,10 @@ packages:
     resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@planetscale/database@1.19.0':
+    resolution: {integrity: sha512-Tv4jcFUFAFjOWrGSio49H6R2ijALv0ZzVBfJKIdm+kl9X046Fh4LLawrF9OMsglVbK6ukqMJsUCeucGAFTBcMA==}
+    engines: {node: '>=16'}
+
   '@playwright/test@1.49.1':
     resolution: {integrity: sha512-Ky+BVzPz8pL6PQxHqNRW1k3mIyv933LML7HktS8uik0bUXNCdPhoS/kLihiO1tMf/egaJb4IutXd7UywvXEW+g==}
     engines: {node: '>=18'}
@@ -7754,6 +7792,53 @@ packages:
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
+  '@prisma/adapter-planetscale@5.22.0':
+    resolution: {integrity: sha512-4fffELMJCAsvLaO4E4YKw6SsX8z3524f0th8dgagr4/p4PQwOJa8wQUktC3DXZdUGG0jyQUZF9ZYPM5e18UB+A==}
+    peerDependencies:
+      '@planetscale/database': ^1.15.0
+
+  '@prisma/client@5.18.0':
+    resolution: {integrity: sha512-BWivkLh+af1kqC89zCJYkHsRcyWsM8/JHpsDMM76DjP3ZdEquJhXa4IeX+HkWPnwJ5FanxEJFZZDTWiDs/Kvyw==}
+    engines: {node: '>=16.13'}
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+
+  '@prisma/debug@5.18.0':
+    resolution: {integrity: sha512-f+ZvpTLidSo3LMJxQPVgAxdAjzv5OpzAo/eF8qZqbwvgi2F5cTOI9XCpdRzJYA0iGfajjwjOKKrVq64vkxEfUw==}
+
+  '@prisma/debug@5.22.0':
+    resolution: {integrity: sha512-AUt44v3YJeggO2ZU5BkXI7M4hu9BF2zzH2iF2V5pyXT/lRTyWiElZ7It+bRH1EshoMRxHgpYg4VB6rCM+mG5jQ==}
+
+  '@prisma/debug@6.8.2':
+    resolution: {integrity: sha512-4muBSSUwJJ9BYth5N8tqts8JtiLT8QI/RSAzEogwEfpbYGFo9mYsInsVo8dqXdPO2+Rm5OG5q0qWDDE3nyUbVg==}
+
+  '@prisma/dmmf@6.8.2':
+    resolution: {integrity: sha512-okGJF/7hQZam/2wt+Y0hPyNxyY5S+L0FzAgtL932Q3YxUWHusRllrN39bCV45oF3QWY992g7rTWYdL2Rynt1qg==}
+
+  '@prisma/driver-adapter-utils@5.22.0':
+    resolution: {integrity: sha512-Y8msGZl9unmVflXoqdxTejv99UD02Gp4VoIvkyw+YxNUIj7nRz35O7yf5D87qNmTiPMGCS1WjUucG9ZuNq8+tw==}
+
+  '@prisma/engines-version@5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169':
+    resolution: {integrity: sha512-a/+LpJj8vYU3nmtkg+N3X51ddbt35yYrRe8wqHTJtYQt7l1f8kjIBcCs6sHJvodW/EK5XGvboOiwm47fmNrbgg==}
+
+  '@prisma/engines@5.18.0':
+    resolution: {integrity: sha512-ofmpGLeJ2q2P0wa/XaEgTnX/IsLnvSp/gZts0zjgLNdBhfuj2lowOOPmDcfKljLQUXMvAek3lw5T01kHmCG8rg==}
+
+  '@prisma/fetch-engine@5.18.0':
+    resolution: {integrity: sha512-I/3u0x2n31rGaAuBRx2YK4eB7R/1zCuayo2DGwSpGyrJWsZesrV7QVw7ND0/Suxeo/vLkJ5OwuBqHoCxvTHpOg==}
+
+  '@prisma/generator-helper@6.8.2':
+    resolution: {integrity: sha512-KBLW47sbwFBKKYMiICIAEWsG6TdpPapPT7e7hpmpF3xMgYAm6YIXu4JGwfQVDY9Vbcb+0vPdPdSEQtInYOOe5g==}
+
+  '@prisma/generator@6.8.2':
+    resolution: {integrity: sha512-yExkvgqiKg1WHzjYttz40g5DsOtud8RhapM0Mum6pw+wrDoQyhSAxs5NHyFCV+9VPvRd2v+jAP2CTT07bsibjw==}
+
+  '@prisma/get-platform@5.18.0':
+    resolution: {integrity: sha512-Tk+m7+uhqcKDgnMnFN0lRiH7Ewea0OEsZZs9pqXa7i3+7svS3FSCqDBCaM9x5fmhhkufiG0BtunJVDka+46DlA==}
 
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
@@ -10517,6 +10602,9 @@ packages:
   '@types/node@15.14.9':
     resolution: {integrity: sha512-qjd88DrCxupx/kJD5yQgZdcYKZKSIGBVDIBE1/LTGcNm3d2Np/jxojkdePDdfnBHJc5W7vSMpbJ1aB7p/Py69A==}
 
+  '@types/node@18.11.9':
+    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+
   '@types/node@18.19.23':
     resolution: {integrity: sha512-wtE3d0OUfNKtZYAqZb8HAWGxxXsImJcPUAgZNw+dWFxO6s5tIwIjyKnY76tsTatsNCLJPkVYwUpq15D38ng9Aw==}
 
@@ -12511,6 +12599,9 @@ packages:
   coa@2.0.2:
     resolution: {integrity: sha512-q5/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrCqIRaSjws4ygRCTCAXA==}
     engines: {node: '>= 4.0'}
+
+  code-block-writer@12.0.0:
+    resolution: {integrity: sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w==}
 
   code-point-at@1.1.0:
     resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
@@ -19698,6 +19789,11 @@ packages:
     peerDependencies:
       react: '>=0.14.9'
 
+  prisma@5.18.0:
+    resolution: {integrity: sha512-+TrSIxZsh64OPOmaSgVPH7ALL9dfU0jceYaMJXsNrTkFHO7/3RANi5K2ZiPB1De9+KDxCWn7jvRq8y8pvk+o9g==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+
   prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -22169,6 +22265,11 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
+  tsx@4.19.4:
+    resolution: {integrity: sha512-gK5GVzDkJK1SI1zwHf32Mqxf2tSJkNx+eYcNly5+nHvWqXUJYUkWBQtKauoESz3ymezAI++ZwT855x5p5eop+Q==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+
   tty-browserify@0.0.1:
     resolution: {integrity: sha512-C3TaO7K81YvjCgQH9Q1S3R3P3BtN3RIM8n+OvX4il1K1zgE8ZhI0op7kClgkxtutIE8hQrcrHBXvIheqKUUCxw==}
 
@@ -22380,6 +22481,11 @@ packages:
 
   typescript-event-target@1.1.1:
     resolution: {integrity: sha512-dFSOFBKV6uwaloBCCUhxlD3Pr/P1a/tJdcmPrTXCHlEFD3faj0mztjcGn6VBAhQ0/Bdy8K3VWrrqwbt/ffsYsg==}
+
+  typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   typescript@5.5.2:
     resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
@@ -23538,6 +23644,13 @@ packages:
     resolution: {integrity: sha512-D7eujBWkLa3p2sIpJA0d1pr7es+a7m0vFAnZLlCEKq/Ij2k0MLi9Br2UPxoxdYystm5K1yeBGzub0FlYUEWj2Q==}
     engines: {node: '>=8.0.0'}
     hasBin: true
+
+  zod-prisma-types@3.2.4:
+    resolution: {integrity: sha512-S4spVBMJAmecLv+aLyRhXK26qW9nWwcsOf1H1fRcEmiI8DPbftZ99u0fhqHlymuTpmMcUpuKxcNNOIqNY0ScSQ==}
+    hasBin: true
+    peerDependencies:
+      '@prisma/client': ^4.x.x || ^5.x.x || ^6.x.x
+      prisma: ^4.x.x || ^5.x.x || ^6.x.x
 
   zod-to-json-schema@3.22.4:
     resolution: {integrity: sha512-2Ed5dJ+n/O3cU383xSY28cuVi0BCQhF8nYqWU5paEpl7fVdqdAmiLdqLyfblbNdfOFwFfi/mqU4O1pwc60iBhQ==}
@@ -29629,7 +29742,7 @@ snapshots:
 
   '@ibm-cloud/watsonx-ai@1.2.0':
     dependencies:
-      '@types/node': 18.19.23
+      '@types/node': 18.11.9
       extend: 3.0.2
       ibm-cloud-sdk-core: 5.1.0
     transitivePeerDependencies:
@@ -30317,7 +30430,7 @@ snapshots:
       - encoding
       - openai
 
-  '@langchain/community@0.3.40(2xqkiqhifqtacwfntm3stkp2ay)':
+  '@langchain/community@0.3.40(o4yx6dpv2k5euua7hoi4wtyk4m)':
     dependencies:
       '@browserbasehq/stagehand': 1.9.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.5)(encoding@0.1.13)(openai@4.96.0(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.25.32))(utf-8-validate@6.0.4)(zod@3.25.32)
       '@ibm-cloud/watsonx-ai': 1.2.0
@@ -30357,6 +30470,7 @@ snapshots:
       '@notionhq/client': 2.2.14(encoding@0.1.13)
       '@opensearch-project/opensearch': 1.2.0
       '@pinecone-database/pinecone': 4.0.0
+      '@planetscale/database': 1.19.0
       '@qdrant/js-client-rest': 1.9.0(typescript@5.5.2)
       '@smithy/eventstream-codec': 2.1.4
       '@smithy/protocol-http': 3.2.2
@@ -30737,9 +30851,9 @@ snapshots:
       '@types/react': 18.2.65
       react: 18.2.0
 
-  '@mem0/community@0.0.1(aiukvfwwsxi7s34n474l4dimlm)':
+  '@mem0/community@0.0.1(2pd22pmynpbk2l3k2pku75znta)':
     dependencies:
-      '@langchain/community': 0.3.40(2xqkiqhifqtacwfntm3stkp2ay)
+      '@langchain/community': 0.3.40(o4yx6dpv2k5euua7hoi4wtyk4m)
       '@langchain/core': 0.3.37(openai@4.96.0(encoding@0.1.13)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.25.32))
       axios: 1.7.9(debug@4.3.4)
       mem0ai: 2.1.16(@anthropic-ai/sdk@0.37.0(encoding@0.1.13))(@google/genai@0.7.0(bufferutil@4.0.8)(encoding@0.1.13)(utf-8-validate@6.0.4))(@mistralai/mistralai@0.1.3(encoding@0.1.13))(@qdrant/js-client-rest@1.9.0(typescript@5.5.2))(@supabase/supabase-js@2.39.8(bufferutil@4.0.8)(utf-8-validate@6.0.4))(@types/jest@29.5.14)(@types/pg@8.11.2)(@types/sqlite3@3.1.11)(encoding@0.1.13)(groq-sdk@0.5.0(encoding@0.1.13))(neo4j-driver@5.27.0)(ollama@0.5.11)(pg@8.11.3)(redis@4.6.13)(sqlite3@5.1.7)(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))
@@ -32598,6 +32712,8 @@ snapshots:
 
   '@pkgr/core@0.2.4': {}
 
+  '@planetscale/database@1.19.0': {}
+
   '@playwright/test@1.49.1':
     dependencies:
       playwright: 1.49.1
@@ -32639,6 +32755,54 @@ snapshots:
       webpack-hot-middleware: 2.26.1
 
   '@popperjs/core@2.11.8': {}
+
+  '@prisma/adapter-planetscale@5.22.0(@planetscale/database@1.19.0)':
+    dependencies:
+      '@planetscale/database': 1.19.0
+      '@prisma/driver-adapter-utils': 5.22.0
+
+  '@prisma/client@5.18.0(prisma@5.18.0)':
+    optionalDependencies:
+      prisma: 5.18.0
+
+  '@prisma/debug@5.18.0': {}
+
+  '@prisma/debug@5.22.0': {}
+
+  '@prisma/debug@6.8.2': {}
+
+  '@prisma/dmmf@6.8.2': {}
+
+  '@prisma/driver-adapter-utils@5.22.0':
+    dependencies:
+      '@prisma/debug': 5.22.0
+
+  '@prisma/engines-version@5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169': {}
+
+  '@prisma/engines@5.18.0':
+    dependencies:
+      '@prisma/debug': 5.18.0
+      '@prisma/engines-version': 5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169
+      '@prisma/fetch-engine': 5.18.0
+      '@prisma/get-platform': 5.18.0
+
+  '@prisma/fetch-engine@5.18.0':
+    dependencies:
+      '@prisma/debug': 5.18.0
+      '@prisma/engines-version': 5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169
+      '@prisma/get-platform': 5.18.0
+
+  '@prisma/generator-helper@6.8.2':
+    dependencies:
+      '@prisma/debug': 6.8.2
+      '@prisma/dmmf': 6.8.2
+      '@prisma/generator': 6.8.2
+
+  '@prisma/generator@6.8.2': {}
+
+  '@prisma/get-platform@5.18.0':
+    dependencies:
+      '@prisma/debug': 5.18.0
 
   '@protobufjs/aspromise@1.1.2': {}
 
@@ -36204,6 +36368,8 @@ snapshots:
 
   '@types/node@15.14.9': {}
 
+  '@types/node@18.11.9': {}
+
   '@types/node@18.19.23':
     dependencies:
       undici-types: 5.26.5
@@ -38809,6 +38975,8 @@ snapshots:
       '@types/q': 1.5.8
       chalk: 2.4.2
       q: 1.5.1
+
+  code-block-writer@12.0.0: {}
 
   code-point-at@1.1.0: {}
 
@@ -48686,6 +48854,10 @@ snapshots:
     dependencies:
       react: 18.2.0
 
+  prisma@5.18.0:
+    dependencies:
+      '@prisma/engines': 5.18.0
+
   prismjs@1.29.0: {}
 
   private@0.1.8: {}
@@ -51922,6 +52094,13 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.8.3
 
+  tsx@4.19.4:
+    dependencies:
+      esbuild: 0.25.4
+      get-tsconfig: 4.10.1
+    optionalDependencies:
+      fsevents: 2.3.3
+
   tty-browserify@0.0.1: {}
 
   tuf-js@1.1.7:
@@ -52118,6 +52297,8 @@ snapshots:
       - supports-color
 
   typescript-event-target@1.1.1: {}
+
+  typescript@5.2.2: {}
 
   typescript@5.5.2: {}
 
@@ -53718,6 +53899,15 @@ snapshots:
       validator: 13.12.0
     optionalDependencies:
       commander: 9.5.0
+
+  zod-prisma-types@3.2.4(@prisma/client@5.18.0(prisma@5.18.0))(prisma@5.18.0):
+    dependencies:
+      '@prisma/client': 5.18.0(prisma@5.18.0)
+      '@prisma/generator-helper': 6.8.2
+      code-block-writer: 12.0.0
+      lodash: 4.17.21
+      prisma: 5.18.0
+      zod: 3.25.32
 
   zod-to-json-schema@3.22.4(zod@3.25.32):
     dependencies:
