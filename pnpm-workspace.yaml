@@ -1,5 +1,11 @@
 packages:
     - 'packages/*'
     - 'apps/*'
-    - 'database/*'
+    - 'tooling/*'
     - 'internal/*'
+    - 'libraries/*'
+    - 'libraries/design-system/*'
+    - 'libraries/embeds/*'
+    - 'cloudflare/*'
+    - 'database/*'
+    - 'apps/web/.react-email'
