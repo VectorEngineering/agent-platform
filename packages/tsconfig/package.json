@@ -1,0 +1,12 @@
+{
+  "name": "@playbookmedia/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
+  "author": "Yoan Yomba",
+  "license": "MIT"
+}

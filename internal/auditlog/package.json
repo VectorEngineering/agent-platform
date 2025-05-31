@@ -1,0 +1,21 @@
+{
+  "name": "@playbookmedia/auditlog",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Yoan Yomba",  
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@playbookmedia/tsconfig": "workspace:*",
+    "typescript": "^5.5.3",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.23.5"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}
