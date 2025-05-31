@@ -1,0 +1,1191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-900;
+  }
+
+  html.dark {
+    @apply text-gray-200;
+  }
+
+  :root {
+    /* Enhanced glass effect variables with stronger effects */
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.12);
+    --glass-shine: rgba(255, 255, 255, 0.12);
+    --glass-shadow: rgba(17, 12, 46, 0.2);
+    --glass-highlight: rgba(255, 255, 255, 0.2);
+
+    /* Add frosted glass variables */
+    --frosted-glass-bg: rgba(255, 255, 255, 0.08);
+    --frosted-glass-border: rgba(255, 255, 255, 0.18);
+    --frosted-glass-blur: 12px;
+
+    /* Improved glass reflections */
+    --glass-reflection: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 40%,
+      rgba(255, 255, 255, 0) 60%
+    );
+
+    --background: 0 0% 100%;
+    --foreground: 233 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 233 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 0 0% 100%;
+    --muted-foreground: 233 10% 40%;
+
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 75% 60%;
+
+    --border: 231 10% 94%;
+    --input: 231 10% 94%;
+    --ring: 231 10% 94%;
+    --radius: 0.6rem;
+
+    /* New, more specific variables */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 0 0% 98%;
+    --primary-100: 0 0% 90%;
+    --primary-200: 0 0% 80%;
+    --primary-300: 0 0% 70%;
+    --primary-400: 0 0% 60%;
+    --primary-500: 0 0% 50%;
+    --primary-600: 0 0% 40%;
+    --primary-700: 0 0% 30%;
+    --primary-800: 0 0% 20%;
+    --primary-900: 0 0% 10%;
+
+    --gray-50: 0, 0%, 100%;
+    --gray-100: 0, 0%, 96%;
+    --gray-200: 0, 0%, 90%;
+    --gray-300: 0, 0%, 80%;
+    --gray-400: 0, 0%, 70%;
+    --gray-500: 0, 0%, 60%;
+    --gray-600: 0, 0%, 50%;
+    --gray-700: 0, 0%, 40%;
+    --gray-800: 0, 0%, 30%;
+    --gray-900: 0, 0%, 20%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --blue-400: 216, 64%, 54%;
+    --blue-500: 216, 79%, 53%;
+
+    /* Document signing specific variables */
+    --document-bg: 0, 0%, 100%;
+    --document-border: 0, 0%, 0%, 0.08;
+    --document-shadow: 0, 0%, 0%, 0.1;
+    --document-text: 0, 0%, 0%;
+    --signature-primary: 0, 0%, 0%;
+    --signature-accent: 216, 100%, 50%;
+
+    /* 3D Book effect variables */
+    --book-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+    --book-spine-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.1);
+    --book-page-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    --book-spine-width: 20px;
+    --book-cover-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.2);
+    --book-page-color: #f8f9fa;
+    --book-page-edge-color: #eaecef;
+  }
+
+  .dark {
+    /* Enhanced dark mode glass effects */
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-shine: rgba(255, 255, 255, 0.06);
+    --glass-shadow: rgba(0, 0, 0, 0.35);
+    --glass-highlight: rgba(255, 255, 255, 0.15);
+
+    /* Add frosted glass variables for dark mode */
+    --frosted-glass-bg: rgba(20, 20, 30, 0.65);
+    --frosted-glass-border: rgba(255, 255, 255, 0.08);
+    --frosted-glass-blur: 12px;
+
+    /* Improved glass reflections for dark mode */
+    --glass-reflection: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.03) 40%,
+      rgba(255, 255, 255, 0) 60%
+    );
+
+    --background: 233 10% 9%;
+    --foreground: 233 10% 36%;
+
+    --card: 233 10% 9%;
+    --card-foreground: 231 17% 100%;
+
+    --popover: 233 10% 9%;
+    --popover-foreground: 231 17% 85%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 233 10% 5%;
+    --secondary-foreground: 231 17% 100%;
+
+    --muted: 233 10% 5%;
+    --muted-foreground: 233 10% 36%;
+
+    --accent: 0 0% 100%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 75% 60%;
+
+    --border: 234 10% 9%;
+    --input: 234 10% 9%;
+    --ring: 234 10% 9%;
+
+    /* New, more specific dark mode variables */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --primary-50: 0 0% 98%;
+    --primary-100: 0 0% 90%;
+    --primary-200: 0 0% 80%;
+    --primary-300: 0 0% 70%;
+    --primary-400: 0 0% 60%;
+    --primary-500: 0 0% 50%;
+    --primary-600: 0 0% 40%;
+    --primary-700: 0 0% 30%;
+    --primary-800: 0 0% 20%;
+    --primary-900: 0 0% 10%;
+
+    --gray-50: 0, 0%, 10%;
+    --gray-100: 0, 0%, 20%;
+    --gray-200: 0, 0%, 30%;
+    --gray-300: 0, 0%, 40%;
+    --gray-400: 0, 0%, 50%;
+    --gray-500: 0, 0%, 60%;
+    --gray-600: 0, 0%, 70%;
+    --gray-700: 0, 0%, 80%;
+    --gray-800: 0, 0%, 90%;
+    --gray-900: 0, 0%, 95%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Document signing specific dark mode variables */
+    --document-bg: 0, 0%, 10%;
+    --document-border: 0, 0%, 100%, 0.08;
+    --document-shadow: 0, 0%, 0%, 0.25;
+    --document-text: 0, 0%, 90%;
+    --signature-primary: 0, 0%, 100%;
+    --signature-accent: 216, 100%, 60%;
+
+    /* 3D Book effect dark mode variables */
+    --book-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+    --book-spine-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.2);
+    --book-page-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    --book-page-color: #2d3748;
+    --book-page-edge-color: #1f2937;
+  }
+}
+
+#polar-bg-gradient {
+  font-size: 12px;
+  font-family: sans-serif;
+  --token-de3bbe02-efef-4dfe-a362-f6d5715de8ac: rgb(209, 223, 242);
+  --token-58f5305f-65b1-4075-86f8-f9ee69a3e917: #fefdf9;
+  --token-ec1cd941-31b3-45e1-ad4c-e85325e1620f: rgb(70, 103, 202);
+  --token-8c1bdbf3-9c17-469a-9d0d-53b702bebc4c: rgb(114, 115, 116);
+  --token-6d46fd94-9194-4d41-ac1f-b299fb0439bf: #303f78;
+  --token-7ea07a0f-ce97-4e5e-8a32-a0ab2739dff4: rgb(70, 103, 202);
+  --token-60634839-9e8c-4342-af21-7bacb8b78d0e: rgb(165, 194, 235);
+  --framer-aspect-ratio-supported: auto;
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1284px;
+  left: calc(22.883597883597908% - 1344px / 2);
+  mix-blend-mode: normal;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: -405px;
+  width: 1344px;
+  z-index: 10;
+}
+
+@media (max-width: 420px) {
+  #polar-bg-gradient {
+    left: calc(22.883597883597908% - 500px);
+    height: 140vh;
+    width: 200vw;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  img[src$="#gh-dark-mode-only"],
+  img[src$="#only-dark"] {
+    display: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+*::selection {
+  background-color: hsla(var(--primary-700), 10%) !important;
+  color: hsla(var(--primary-700), 100%) !important;
+}
+
+.text-link {
+  color: hsla(var(--blue-400), 0.8);
+}
+
+.text-link:hover {
+  color: hsla(var(--blue-400), 0.8);
+}
+
+.thin-bullets ul {
+  list-style-type: disc;
+}
+
+.thin-bullets ul li::marker {
+  font-weight: normal;
+  font-size: 0.75em;
+}
+
+:is([data-theme="light"], .light) .react-tweet-theme {
+  --tweet-bg-color: --foreground;
+  --tweet-bg-color-hover: hsla(var(--gray-200), 100%);
+}
+
+:is([data-theme="dark"], .dark) .react-tweet-theme {
+  --tweet-bg-color: --foreground;
+  --tweet-bg-color-hover: hsla(var(--gray-50), 100%);
+}
+
+.tweet-container_root__0rJLq {
+  max-width: 100% !important;
+}
+
+.custom-tweet-container {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Prose */
+.prose code:not(pre code) {
+  @apply rounded-md border border-slate-300 bg-slate-200 px-1 py-0.5 before:content-none after:content-none dark:border-slate-700 dark:bg-slate-950;
+}
+
+pre.shiki {
+  overflow: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    /* Optional, if you also want font styles */
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+
+@layer components {
+  /* Enhanced Glass Components */
+  .glass {
+    @apply relative backdrop-blur-[20px] backdrop-saturate-[200%];
+    background: linear-gradient(
+      135deg,
+      var(--glass-bg),
+      rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      0 8px 32px -1px var(--glass-shadow),
+      inset 0 1px 0 0 var(--glass-highlight);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glass::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+    background: var(--glass-reflection);
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  /* Modern frosted glass effect */
+  .frosted-glass {
+    @apply relative overflow-hidden rounded-xl;
+    backdrop-filter: blur(var(--frosted-glass-blur));
+    -webkit-backdrop-filter: blur(var(--frosted-glass-blur));
+    background: var(--frosted-glass-bg);
+    border: 1px solid var(--frosted-glass-border);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-card {
+    @apply glass rounded-xl p-6;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition:
+      transform 0.25s ease-out,
+      box-shadow 0.25s ease-out;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px) translateZ(0);
+    box-shadow:
+      0 16px 40px -4px var(--glass-shadow),
+      inset 0 1px 0 0 var(--glass-highlight);
+  }
+
+  .glass-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 25%,
+      var(--glass-shine) 45%,
+      var(--glass-shine) 55%,
+      transparent 75%,
+      transparent 100%
+    );
+    transform: skewX(-15deg);
+    animation: shimmer 8s infinite linear;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .glass-card:hover::before {
+    opacity: 1;
+  }
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-150%) skewX(-15deg);
+    }
+    to {
+      transform: translateX(150%) skewX(-15deg);
+    }
+  }
+
+  .glass-input {
+    @apply glass rounded-lg border-0 bg-opacity-50 px-4 py-3 outline-none ring-1 ring-gray-200/30 backdrop-blur-xl transition-all duration-200 ease-in-out focus:ring-2 focus:ring-primary/40 dark:ring-gray-800/30;
+    background: linear-gradient(
+      170deg,
+      var(--glass-bg),
+      rgba(255, 255, 255, 0.02)
+    );
+  }
+
+  .glass-input:focus {
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 32px -4px var(--glass-shadow),
+      inset 0 1px 0 0 var(--glass-highlight);
+  }
+
+  .glass-button {
+    @apply glass rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ease-out hover:bg-opacity-10 active:scale-[0.98];
+    background: linear-gradient(
+      135deg,
+      var(--glass-bg),
+      rgba(255, 255, 255, 0.02)
+    );
+  }
+
+  .glass-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 32px -4px var(--glass-shadow),
+      inset 0 1px 0 0 var(--glass-highlight);
+  }
+
+  /* New super glass panel with enhanced effects */
+  .super-glass-panel {
+    @apply overflow-hidden rounded-2xl;
+    position: relative;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-out;
+  }
+
+  .super-glass-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .super-glass-panel:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-panel {
+    @apply glass rounded-2xl border border-gray-200/30 shadow-xl transition-all duration-300 ease-in-out dark:border-gray-800/30;
+    background: linear-gradient(
+      165deg,
+      var(--glass-bg),
+      rgba(255, 255, 255, 0.02)
+    );
+  }
+
+  .glass-panel:hover {
+    box-shadow:
+      0 24px 48px -12px var(--glass-shadow),
+      inset 0 1px 0 0 var(--glass-highlight);
+  }
+
+  /* Morphic Glass Button - organic shape with glass effect */
+  .morphic-glass-button {
+    @apply relative overflow-hidden px-6 py-3 font-medium;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .morphic-glass-button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .morphic-glass-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .lego-grid {
+    background-size: 50px 50px;
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(var(--primary), 0.05) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(var(--primary), 0.05) 1px,
+        transparent 1px
+      );
+  }
+
+  .lego-block {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    will-change: transform;
+  }
+
+  .lego-block::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    height: 8px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.7)
+    );
+    border-radius: 8px 8px 0 0;
+    transform-origin: bottom;
+    transform: rotateX(5deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .lego-block::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 8px 8px;
+    filter: blur(2px);
+  }
+
+  .lego-stud {
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #000000, #1a1a1a);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+
+  .lego-stud::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 50% 50% 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .lego-block::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.6)
+    );
+  }
+
+  .dark .lego-stud::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.6)
+    );
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translateY(-15px) rotate(5deg) scale(1.02);
+    }
+    50% {
+      transform: translateY(-30px) rotate(-5deg) scale(1);
+    }
+    75% {
+      transform: translateY(-15px) rotate(3deg) scale(0.98);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg) scale(1);
+    }
+  }
+
+  .lego-float {
+    animation: float 8s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .lego-float:nth-child(odd) {
+    animation-duration: 9s;
+    animation-delay: -4s;
+  }
+
+  .lego-float:nth-child(3n) {
+    animation-duration: 7s;
+    animation-delay: -2s;
+  }
+
+  .lego-float:nth-child(3n + 1) {
+    animation-duration: 10s;
+    animation-delay: -6s;
+  }
+
+  .lego-float:hover {
+    animation-play-state: paused;
+  }
+
+  .bg-grid-pattern {
+    background-size: 100px 100px;
+    background-image:
+      linear-gradient(to right, rgba(var(--primary), 0) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--primary), 0) 1px, transparent 1px);
+  }
+
+  @keyframes stack {
+    0% {
+      transform: translateY(100vh) rotate(0deg) scale(0.8);
+      opacity: 0;
+    }
+    15% {
+      transform: translateY(0) rotate(var(--rotation)) scale(1);
+      opacity: 1;
+    }
+    85% {
+      transform: translateY(0) rotate(var(--rotation)) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(var(--rotation)) scale(0.8);
+      opacity: 0;
+    }
+  }
+
+  .lego-stack {
+    animation: stack 8s ease-in-out infinite;
+    --rotation: 0deg;
+  }
+
+  .lego-stack:nth-child(1) {
+    --rotation: 0deg;
+    animation-delay: -0.5s;
+  }
+  .lego-stack:nth-child(2) {
+    --rotation: 12deg;
+    animation-delay: -1s;
+  }
+  .lego-stack:nth-child(3) {
+    --rotation: 24deg;
+    animation-delay: -1.5s;
+  }
+  .lego-stack:nth-child(4) {
+    --rotation: 36deg;
+    animation-delay: -2s;
+  }
+  .lego-stack:nth-child(5) {
+    --rotation: 48deg;
+    animation-delay: -2.5s;
+  }
+  .lego-stack:nth-child(6) {
+    --rotation: 60deg;
+    animation-delay: -3s;
+  }
+  .lego-stack:nth-child(7) {
+    --rotation: 72deg;
+    animation-delay: -3.5s;
+  }
+  .lego-stack:nth-child(8) {
+    --rotation: 84deg;
+    animation-delay: -4s;
+  }
+  .lego-stack:nth-child(9) {
+    --rotation: 96deg;
+    animation-delay: -4.5s;
+  }
+  .lego-stack:nth-child(10) {
+    --rotation: 108deg;
+    animation-delay: -5s;
+  }
+  .lego-stack:nth-child(11) {
+    --rotation: 120deg;
+    animation-delay: -5.5s;
+  }
+  .lego-stack:nth-child(12) {
+    --rotation: 132deg;
+    animation-delay: -6s;
+  }
+
+  /* Document Signing Components enhanced with glass effects */
+  .document-container {
+    @apply relative overflow-hidden rounded-xl;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .document-container:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .document-header {
+    @apply flex items-center justify-between border-b border-gray-100 px-4 py-3;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.85)
+    );
+    backdrop-filter: blur(5px);
+  }
+
+  .document-content {
+    @apply p-6;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: var(--document-pattern);
+  }
+
+  .document-footer {
+    @apply flex items-center justify-between border-t border-gray-100 px-4 py-3;
+    background: rgba(249, 250, 251, 0.85);
+    backdrop-filter: blur(5px);
+  }
+
+  /* Glass signature components */
+  .signature-field {
+    @apply relative flex min-h-[100px] items-center justify-center rounded-md p-4 transition-all duration-200;
+    background: rgba(249, 250, 251, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+
+  .signature-field:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    box-shadow:
+      inset 0 1px 3px rgba(0, 0, 0, 0.05),
+      0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .signature-field-active {
+    border: 2px solid var(--signature-primary);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.1),
+      inset 0 1px 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .signature-button {
+    @apply text-white inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-all duration-200;
+    background: linear-gradient(145deg, #000000, #222222);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .signature-button:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 6px 15px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  .signature-button-outline {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-black transition-all duration-200;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .signature-button-outline:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .signature-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .signature-badge-success {
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .signature-badge-pending {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: rgba(37, 99, 235, 0.8);
+  }
+
+  .signature-badge-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: rgba(220, 38, 38, 0.8);
+  }
+
+  .signature-input {
+    @apply block w-full rounded-md shadow-sm transition-all duration-200 sm:text-sm;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    box-shadow:
+      inset 0 1px 2px rgba(0, 0, 0, 0.05),
+      0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .signature-input:focus {
+    border-color: var(--signature-primary);
+    box-shadow:
+      0 0 0 2px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .signature-tooltip {
+    @apply text-white z-10 rounded-md px-3 py-2 text-sm font-medium;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.2),
+      0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .signature-progress {
+    @apply h-2 overflow-hidden rounded-full;
+    background: rgba(229, 231, 235, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .signature-progress-bar {
+    @apply h-full rounded-full transition-all duration-500 ease-in-out;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* New Glass Modal Component */
+  .glass-modal {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  .glass-modal-content {
+    @apply relative mx-auto w-full max-w-md overflow-hidden rounded-2xl;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.15),
+      0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .glass-modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Dark mode glass effect overrides */
+  .dark .frosted-glass {
+    background: rgba(15, 15, 20, 0.65);
+    border-color: rgba(255, 255, 255, 0.05);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .super-glass-panel {
+    background: linear-gradient(
+      135deg,
+      rgba(30, 30, 40, 0.8),
+      rgba(15, 15, 20, 0.7)
+    );
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .super-glass-panel::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .dark .signature-button-outline {
+    background: rgba(30, 30, 40, 0.85);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .signature-input {
+    background: rgba(30, 30, 40, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .dark .signature-field {
+    background: rgba(30, 30, 40, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-modal-content {
+    background: rgba(20, 20, 30, 0.85);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .glass-modal-content::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Modern Glass Effect Utilities */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .backdrop-blur-xl {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .backdrop-blur-2xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .backdrop-saturate-50 {
+    backdrop-filter: saturate(50%);
+    -webkit-backdrop-filter: saturate(50%);
+  }
+
+  .backdrop-saturate-100 {
+    backdrop-filter: saturate(100%);
+    -webkit-backdrop-filter: saturate(100%);
+  }
+
+  .backdrop-saturate-150 {
+    backdrop-filter: saturate(150%);
+    -webkit-backdrop-filter: saturate(150%);
+  }
+
+  .backdrop-saturate-200 {
+    backdrop-filter: saturate(200%);
+    -webkit-backdrop-filter: saturate(200%);
+  }
+
+  /* 3D Transform Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+    transform: rotateX(5deg);
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotateY-180 {
+    transform: rotateY(180deg);
+  }
+
+  /* Book-specific styles */
+  .book-spine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--book-spine-width);
+    box-shadow: var(--book-spine-shadow);
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+    z-index: 10;
+  }
+
+  .book-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--book-spine-width);
+    right: 0;
+    transform-origin: left;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: var(--book-cover-shadow);
+    backdrop-filter: blur(4px);
+  }
+
+  .book-pages {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: calc(var(--book-spine-width) - 8px);
+    right: 8px;
+    border-radius: 0.375rem;
+    padding: 1.5rem;
+    background-color: var(--book-page-color);
+    z-index: -1;
+    box-shadow: var(--book-page-shadow);
+    transition: opacity 0.3s ease;
+    overflow: auto;
+  }
+
+  .book-page-edge {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: var(--book-spine-width);
+    width: 6px;
+    background-color: var(--book-page-edge-color);
+    border-radius: 1px;
+    z-index: -2;
+  }
+
+  .book-shadow {
+    position: absolute;
+    bottom: -15px;
+    left: 5%;
+    right: 5%;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: var(--book-shadow);
+    filter: blur(10px);
+    z-index: -10;
+    opacity: 0.6;
+  }
+}

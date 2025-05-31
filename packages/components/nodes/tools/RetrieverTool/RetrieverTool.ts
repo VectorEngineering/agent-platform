@@ -1,12 +1,13 @@
-import { z } from 'zod'
-import { CallbackManager, CallbackManagerForToolRun, Callbacks, parseCallbackConfigArg } from '@langchain/core/callbacks/manager'
 import { BaseDynamicToolInput, DynamicTool, StructuredTool, ToolInputParsingException } from '@langchain/core/tools'
-import { BaseRetriever } from '@langchain/core/retrievers'
+import { CallbackManager, CallbackManagerForToolRun, Callbacks, parseCallbackConfigArg } from '@langchain/core/callbacks/manager'
 import { ICommonObject, INode, INodeData, INodeParams } from '../../../src/Interface'
 import { getBaseClasses, resolveFlowObjValue } from '../../../src/utils'
-import { SOURCE_DOCUMENTS_PREFIX } from '../../../src/agents'
+
+import { BaseRetriever } from '@langchain/core/retrievers'
 import { RunnableConfig } from '@langchain/core/runnables'
+import { SOURCE_DOCUMENTS_PREFIX } from '../../../src/agents'
 import { VectorStoreRetriever } from '@langchain/core/vectorstores'
+import { z } from 'zod'
 
 const howToUse = `Add additional filters to vector store. You can also filter with flow config, including the current "state":
 - \`$flow.sessionId\`

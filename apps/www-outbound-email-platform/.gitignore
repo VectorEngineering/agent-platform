@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.swc/
+.*.env
+.env*.local
+.DS_Store
+.vscode
+
+# contentlayer
+.contentlayer
+*storybook.log
