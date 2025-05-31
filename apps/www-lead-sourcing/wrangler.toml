@@ -1,5 +1,5 @@
   main = ".open-next/worker.js"
-  name = "www-signal-to-sql-to-send"
+  name = "www-lead-sourcing"
   compatibility_date = "2025-03-25"
   compatibility_flags = ["nodejs_compat"]
   [assets]
