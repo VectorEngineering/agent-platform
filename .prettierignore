@@ -1,0 +1,66 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+build
+.next
+out
+.turbo
+
+# Coverage and testing
+coverage
+.nyc_output
+.cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+
+# Public and static directories
+public
+static
+
+# Minified files
+*.min.js
+*.min.css
+
+# Stories that use top-level await which cause ESM/CommonJS conflicts
+**/stories/**/*.stories.ts
+**/stories/**/*.stories.js
+
+# Generated files
+**/*.d.ts
+**/generated/**
+
+# Specific large data files
+**/node_modules/**
+**/.git/**
+
+# Config files that might have mixed module systems
+**/prisma/schema.prisma
+
+# Packages that use ES modules and might cause conflicts
+internal/backend-client/**
+libraries/cli/**
+libraries/rbac/**
+
+# Apps that use Next.js with top-level await causing ESM conflicts
+apps/**
+
+# Packages that have module system issues
+packages/** 

@@ -1,0 +1,21 @@
+{
+    "name": "@playbookmedia/collaboration",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@playbookmedia/env": "workspace:*",
+        "@liveblocks/client": "^2.13.1",
+        "@liveblocks/node": "^2.13.1",
+        "@liveblocks/react": "^2.13.1",
+        "react": "^19.0.0",
+        "server-only": "^0.0.1"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "^19.0.1"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

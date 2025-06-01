@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@playbookmedia/tsconfig/base.json",
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src/**/*"]
+}

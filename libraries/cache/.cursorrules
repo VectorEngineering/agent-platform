@@ -1,0 +1,663 @@
+
+
+## **TypeScript Package Development Guidelines for Next.js Monorepo (Non-React)**
+
+### **1. Expertise and Technology Stack**
+You are an expert in the following technologies:
+- **Languages & Frameworks:** TypeScript, Node.js, Next.js
+- **UI Libraries (if applicable):** Shadcn UI, Radix UI (if used for any UI components)
+- **Styling:** Tailwind CSS
+- **Build Tools & Package Management:** Webpack, Rollup, pnpm, Yarn Workspaces
+
+### **2. Code Style and Structure**
+
+#### **a. Code Quality**
+- **Conciseness:** Write concise and clear TypeScript code with accurate examples.
+- **Modularity:** Use modular programming practices to enhance reusability and maintainability.
+- **Avoid Duplication:** Prefer iteration and abstraction over code duplication.
+- **Functional Programming:** Embrace functional and declarative programming patterns; avoid using classes unless necessary.
+
+#### **b. Naming Conventions**
+- **Directories:** Use lowercase with dashes for directory names (e.g., `utils/helpers`, `services/api-client`).
+- **Files:** Use consistent naming conventions, such as `kebab-case` or `camelCase`, based on project standards.
+- **Variables:** Use descriptive variable names with auxiliary prefixes where appropriate (e.g., `isLoading`, `hasError`).
+- **Exports:** Favor named exports to improve tree-shaking and clarity.
+
+#### **c. File Structure**
+Organize files in a logical and consistent manner:
+- **Modules:** Exported modules or services.
+- **Submodules:** Related submodules or utilities.
+- **Helpers/Utilities:** Helper functions and utility modules.
+- **Static Content:** Static data or configuration files.
+- **Types:** Type definitions and interfaces.
+
+### **3. TypeScript Best Practices**
+
+#### **a. Type Definitions**
+- **Interfaces over Types:** Prefer using `interface` for defining object shapes over `type` aliases.
+- **Avoid Enums:** Use `const` objects or `Map` instead of `enum` for better flexibility and interoperability.
+- **Type Safety:** Leverage TypeScript’s type system to enforce type safety across the codebase.
+
+#### **b. Functional Modules**
+- **Pure Functions:** Use the `function` keyword to define pure functions.
+- **Immutability:** Favor immutable data structures and pure functions to enhance predictability and testability.
+
+### **4. Syntax and Formatting**
+
+#### **a. Clean Syntax**
+- **Concise Conditionals:** Avoid unnecessary curly braces in conditional statements; use concise syntax for simple expressions.
+  
+  ```typescript
+  // Prefer
+  const result = condition ? value1 : value2;
+
+  // Over
+  let result;
+  if (condition) {
+    result = value1;
+  } else {
+    result = value2;
+  }
+  ```
+
+- **Declarative Code:** Write declarative and readable code that clearly expresses intent.
+
+#### **b. Formatting**
+- **Consistent Formatting:** Adhere to a consistent code formatting style using tools like Prettier.
+- **Linting:** Use ESLint with TypeScript support to enforce code quality and style rules.
+
+### **5. UI and Styling (If Applicable)**
+
+*If your package includes any UI components or interfaces:*
+
+#### **a. Component Libraries**
+- **Shadcn UI & Radix UI:** Utilize these libraries for building accessible and customizable UI components.
+- **Tailwind CSS:** Implement Tailwind CSS for utility-first styling, enabling rapid UI development and consistent design.
+
+#### **b. Responsive Design**
+- **Mobile-First Approach:** Design components and layouts with a mobile-first mindset, ensuring responsiveness across various devices.
+- **Utility Classes:** Leverage Tailwind’s utility classes to handle responsive design efficiently.
+
+### **6. Performance Optimization**
+
+#### **a. Efficient Code Practices**
+- **Minimize Dependencies:** Avoid unnecessary dependencies to reduce bundle size and improve load times.
+- **Lazy Loading:** Implement dynamic imports and code-splitting to load non-critical modules on demand.
+
+#### **b. Resource Optimization**
+- **Image Optimization:** Use optimized image formats (e.g., WebP), include size data, and implement lazy loading where applicable.
+- **Caching Strategies:** Employ effective caching strategies to enhance performance and reduce redundant data fetching.
+
+### **7. Monorepo Best Practices**
+
+#### **a. Package Management**
+- **Workspace Tools:** Utilize workspace tools like Yarn Workspaces or pnpm to manage dependencies and inter-package relationships efficiently.
+- **Consistent Versioning:** Maintain consistent versioning across packages to simplify dependency management and updates.
+
+#### **b. Code Sharing and Reusability**
+- **Shared Utilities:** Centralize shared utilities, types, and helper functions to promote code reuse and reduce duplication.
+- **Clear Boundaries:** Define clear boundaries between packages to ensure modularity and ease of maintenance.
+
+### **8. Next.js Specifics**
+
+Although your package does not utilize React directly, integrating with Next.js requires adherence to its conventions and best practices, especially for server-side functionalities.
+
+#### **a. API Routes and Server Functions**
+- **API Routes:** Structure your API routes following Next.js conventions, placing them under the `pages/api` directory or the `app/api` directory if using the App Router.
+
+  ```typescript
+  // Example: pages/api/user.ts
+  import type { NextApiRequest, NextApiResponse } from 'next';
+  import { getUser } from '@/services/userService';
+
+  export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    if (req.method === 'GET') {
+      const user = await getUser(req.query.id as string);
+      res.status(200).json(user);
+    } else {
+      res.setHeader('Allow', ['GET']);
+      res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
+  }
+  ```
+
+- **Server Functions:** Utilize Next.js server functions for handling server-side logic, ensuring separation from client-side code.
+
+#### **b. Data Fetching and Caching**
+- **Efficient Data Fetching:** Use Next.js data fetching methods like `getServerSideProps`, `getStaticProps`, or API routes to retrieve data efficiently.
+- **Caching Mechanisms:** Implement caching strategies using Next.js built-in features or external caching solutions to optimize performance.
+
+#### **c. Environment Variables**
+- **Secure Configuration:** Manage environment variables securely using `.env` files and Next.js's built-in support for environment variables.
+- **Type Safety:** Define TypeScript types for environment variables to ensure type safety and prevent runtime errors.
+
+  ```typescript
+  // Example: types/env.d.ts
+  declare namespace NodeJS {
+    interface ProcessEnv {
+      DATABASE_URL: string;
+      NEXT_PUBLIC_API_URL: string;
+      // Add other environment variables here
+    }
+  }
+  ```
+
+#### **d. Middleware and Edge Functions**
+- **Middleware Usage:** Leverage Next.js middleware for tasks like authentication, logging, and request modification.
+  
+  ```typescript
+  // Example: middleware.ts
+  import { NextResponse } from 'next/server';
+  import type { NextRequest } from 'next/server';
+
+  export function middleware(req: NextRequest) {
+    const token = req.cookies.get('token');
+    if (!token) {
+      return NextResponse.redirect(new URL('/login', req.url));
+    }
+    return NextResponse.next();
+  }
+  ```
+
+- **Edge Functions:** Utilize Edge Functions for low-latency operations and enhanced performance.
+
+#### **e. Type-Safe Server Actions**
+- **Schema Validation:** Use `Zod` or similar libraries to define and validate schemas for server actions, ensuring robust type checking and validation.
+
+  ```typescript
+  import { z } from 'zod';
+
+  const schema = z.object({
+    value: z.string(),
+  });
+
+  export const someAction = async (input: unknown): Promise<ActionResponse> => {
+    const parsed = schema.safeParse(input);
+    if (!parsed.success) {
+      return { success: false, error: 'Invalid input' };
+    }
+    try {
+      // Action logic here
+      const result = /* perform action with parsed.data.value */;
+      return { success: true, data: result };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof AppError ? error.message : 'Unexpected error',
+      };
+    }
+  };
+  ```
+
+- **Consistent Error Handling:** Implement consistent error handling mechanisms to return appropriate and informative responses.
+
+#### **f. Routing and URL Management**
+- **App Router:** Follow Next.js App Router principles for defining routes and handling navigation, even if not using React components.
+- **Dynamic Routing:** Utilize dynamic routing features for flexible API endpoint definitions.
+
+### **9. Key Conventions**
+
+#### **a. State Management**
+- **URL Search Parameters:** Use libraries like `nuqs` for managing URL search parameter state efficiently within server-side contexts or API routes.
+
+  ```typescript
+  import { useQueryState } from 'nuqs';
+
+  export function Demo() {
+    const [name, setName] = useQueryState('name');
+    return (
+      <>
+        <input value={name || ''} onChange={e => setName(e.target.value)} />
+        <button onClick={() => setName(null)}>Clear</button>
+        <p>Hello, {name || 'anonymous visitor'}!</p>
+      </>
+    );
+  }
+  ```
+
+  *Note: Adapt usage based on whether `nuqs` is compatible with your server-side context.*
+
+#### **b. Performance Metrics**
+- **Web Vitals Optimization:** Focus on optimizing key performance metrics such as Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), and First Input Delay (FID) by leveraging Next.js performance features.
+
+#### **c. Server vs. Client Responsibilities**
+- **Server-Side Operations:** Favor server-side operations and rendering to enhance performance and security.
+- **Client-Side Operations:** Limit client-side code to necessary Web API interactions and small, isolated functionalities. Avoid using client-side state management for data fetching or complex state handling.
+
+### **10. Error Handling and Validation**
+
+#### **a. Robust Validation**
+- **Schema Validation:** Use `Zod` or similar libraries to define input schemas for robust type checking and validation.
+
+  ```typescript
+  import { z } from 'zod';
+
+  const schema = z.object({
+    value: z.string(),
+  });
+
+  export const someFunction = (input: unknown) => {
+    const parsed = schema.safeParse(input);
+    if (!parsed.success) {
+      throw new Error('Invalid input');
+    }
+    // Proceed with parsed.data
+  };
+  ```
+
+#### **b. Graceful Error Handling**
+- **Consistent Responses:** Implement consistent error handling mechanisms to return appropriate and informative responses.
+- **Logging:** Incorporate logging for error tracking and debugging purposes using logging libraries like Winston or Bunyan.
+
+### **11. Example Implementations**
+
+#### **a. Safe Action Example**
+
+*Adapted for Next.js server-side context.*
+
+```typescript
+// src/actions/someAction.ts
+import { createSafeActionClient } from 'next-safe-action';
+import { z } from 'zod';
+import type { ActionResponse } from '@/types/actions';
+
+const schema = z.object({
+  value: z.string(),
+});
+
+export const someAction = createSafeActionClient()
+  .schema(schema)
+  .action(async (input): Promise<ActionResponse> => {
+    try {
+      // Action logic here
+      const result = await performSomeAction(input.value);
+      return { success: true, data: result };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof AppError ? error.message : 'Unexpected error',
+      };
+    }
+  });
+
+async function performSomeAction(value: string): Promise<any> {
+  // Implement the action's logic here
+  return { processedValue: value.toUpperCase() };
+}
+```
+
+#### **b. Query State Management Example**
+
+*Adapted for Next.js server-side or API route context.*
+
+```typescript
+// src/utils/queryState.ts
+import { useQueryState } from 'nuqs';
+
+export function manageQueryState() {
+  const [name, setName] = useQueryState('name');
+  
+  // Implement logic based on query state
+  // Note: Ensure that `nuqs` is compatible with your server-side usage
+}
+```
+
+*If `nuqs` is primarily a client-side library, consider alternative state management strategies for server-side contexts, such as parsing URL parameters directly.*
+
+### **12. Documentation and Testing**
+
+#### **a. Documentation**
+- **Comprehensive Documentation:** Maintain clear and comprehensive documentation for all modules, functions, and types using tools like TypeDoc.
+- **Inline Comments:** Use meaningful inline comments to explain complex logic and decisions.
+
+#### **b. Testing**
+- **Unit Testing:** Write unit tests for all critical functions and modules using testing frameworks like Vitest.
+- **Type Safety in Tests:** Ensure that tests leverage TypeScript’s type system to catch type-related issues early.
+- **Integration Testing:** Implement integration tests for API routes and server functions to ensure they work seamlessly within the Next.js environment.
+- **Continuous Integration:** Integrate testing into your CI/CD pipeline to ensure code quality and reliability.
+
+  ```yaml
+  # Example GitHub Actions workflow for testing
+  name: CI
+
+  on:
+    push:
+      branches: [ main ]
+    pull_request:
+      branches: [ main ]
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      strategy:
+        matrix:
+          node-version: [14.x, 16.x]
+
+      steps:
+        - uses: actions/checkout@v2
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v2
+          with:
+            node-version: ${{ matrix.node-version }}
+        - run: yarn install --frozen-lockfile
+        - run: yarn build
+        - run: yarn test
+  ```
+
+### **13. Version Control and Collaboration**
+
+#### **a. Git Practices**
+- **Branching Strategy:** Adopt a consistent branching strategy (e.g., GitFlow, trunk-based development) to manage feature development and releases.
+- **Commit Messages:** Use clear and descriptive commit messages to document changes effectively.
+
+  ```
+  feat(api): add user retrieval endpoint
+  fix(auth): handle token expiration
+  docs(readme): update setup instructions
+  ```
+
+#### **b. Code Reviews**
+- **Peer Reviews:** Implement a code review process to maintain code quality and facilitate knowledge sharing.
+- **Automated Checks:** Use automated tools for linting, formatting, and testing to enforce standards before merging.
+
+### **14. Security Best Practices**
+
+#### **a. Secure Coding**
+- **Input Validation:** Always validate and sanitize inputs to prevent injection attacks.
+- **Authentication & Authorization:** Implement robust authentication and authorization mechanisms for API routes and server functions.
+- **Environment Variables:** Keep sensitive information, such as API keys and database credentials, secure and out of version control.
+
+#### **b. Dependency Management**
+- **Regular Updates:** Keep dependencies up to date to mitigate security vulnerabilities.
+- **Vulnerability Scanning:** Use tools like `npm audit` or `Snyk` to scan for and address vulnerabilities in dependencies.
+
+### **15. Deployment and Environment Management**
+
+#### **a. Deployment Strategies**
+- **Next.js Deployment:** Follow Next.js deployment best practices, utilizing platforms like Vercel or deploying on your own infrastructure with Node.js.
+- **Environment Configuration:** Manage different environments (development, staging, production) with appropriate configurations and environment variables.
+
+#### **b. Infrastructure as Code**
+- **Automation:** Use Infrastructure as Code (IaC) tools like Terraform or Ansible to manage deployment infrastructure consistently.
+- **Version Control:** Keep infrastructure configurations under version control to track changes and enable reproducibility.
+
+### **16. Example Project Structure**
+
+Here’s an example project structure tailored for a Next.js monorepo TypeScript package without React components:
+
+```
+monorepo/
+├── packages/
+│   ├── my-package/
+│   │   ├── src/
+│   │   │   ├── actions/
+│   │   │   │   └── someAction.ts
+│   │   │   ├── services/
+│   │   │   │   └── apiClient.ts
+│   │   │   ├── utils/
+│   │   │   │   └── helperFunctions.ts
+│   │   │   ├── types/
+│   │   │   │   └── index.d.ts
+│   │   │   ├── config/
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   ├── tests/
+│   │   │   └── someAction.test.ts
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   └── README.md
+├── packages/
+│   └── another-package/
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+### **17. Continuous Integration and Deployment (CI/CD)**
+
+#### **a. CI/CD Pipelines**
+- **Automated Builds and Tests:** Set up CI/CD pipelines to automatically build and test your package on each commit or pull request.
+- **Deployment Automation:** Automate the deployment process to ensure consistent and reliable releases.
+
+#### **b. Environment Management**
+- **Secrets Management:** Securely manage secrets and sensitive information using environment variables and secret management tools provided by your CI/CD platform.
+
+  ```yaml
+  # Example GitHub Actions workflow for deployment
+  name: Deploy
+
+  on:
+    push:
+      branches: [ main ]
+
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v2
+        - name: Setup Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '16.x'
+        - run: yarn install --frozen-lockfile
+        - run: yarn build
+        - name: Deploy to Vercel
+          uses: amondnet/vercel-action@v20
+          with:
+            vercel-token: ${{ secrets.VERCEL_TOKEN }}
+            vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+            vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+            working-directory: ./packages/my-package
+  ```
+
+### **18. Monitoring and Logging**
+
+#### **a. Monitoring Tools**
+- **Performance Monitoring:** Use tools like New Relic, Datadog, or Prometheus to monitor the performance and health of your server-side functions and API routes.
+- **Error Tracking:** Implement error tracking solutions like Sentry to capture and manage errors in real-time.
+
+#### **b. Logging Practices**
+- **Structured Logging:** Use structured logging formats (e.g., JSON) to facilitate easier parsing and analysis.
+- **Centralized Logging:** Aggregate logs using centralized logging systems like ELK Stack (Elasticsearch, Logstash, Kibana) or cloud-based solutions.
+
+  ```typescript
+  // Example: src/utils/logger.ts
+  import { createLogger, transports, format } from 'winston';
+
+  const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+      format.timestamp(),
+      format.json()
+    ),
+    transports: [
+      new transports.Console(),
+      new transports.File({ filename: 'logs/error.log', level: 'error' }),
+      new transports.File({ filename: 'logs/combined.log' }),
+    ],
+  });
+
+  export default logger;
+  ```
+
+### **19. Advanced TypeScript Features**
+
+#### **a. Generics and Advanced Types**
+- **Generics:** Utilize generics to create reusable and type-safe functions and classes.
+  
+  ```typescript
+  export function fetchData<T>(url: string): Promise<T> {
+    return fetch(url).then(response => response.json());
+  }
+  ```
+
+- **Mapped Types and Conditional Types:** Leverage advanced TypeScript features to create flexible and powerful type definitions.
+
+  ```typescript
+  type Readonly<T> = {
+    readonly [P in keyof T]: T[P];
+  };
+  ```
+
+#### **b. Type Guards and Assertion Functions**
+- **Type Guards:** Implement type guards to refine types at runtime.
+
+  ```typescript
+  function isString(value: unknown): value is string {
+    return typeof value === 'string';
+  }
+
+  function processValue(value: unknown) {
+    if (isString(value)) {
+      // TypeScript now knows value is a string
+      console.log(value.toUpperCase());
+    }
+  }
+  ```
+
+- **Assertion Functions:** Use assertion functions to enforce type conditions.
+
+  ```typescript
+  function assertIsNumber(value: unknown): asserts value is number {
+    if (typeof value !== 'number') {
+      throw new Error('Value is not a number');
+    }
+  }
+
+  function doubleValue(value: unknown): number {
+    assertIsNumber(value);
+    return value * 2;
+  }
+  ```
+
+### **20. Accessibility and Internationalization (If Applicable)**
+
+*If your package includes any user-facing components or interfaces:*
+
+#### **a. Accessibility (A11y)**
+- **Standards Compliance:** Ensure that any UI components comply with accessibility standards (e.g., WCAG).
+- **Semantic HTML:** Use semantic HTML elements to improve accessibility and SEO.
+
+#### **b. Internationalization (i18n)**
+- **Localization Support:** Implement localization support to cater to a global audience using libraries like `next-i18next`.
+- **Dynamic Content Translation:** Ensure that dynamic content can be easily translated and adapted to different languages.
+
+### **21. Example Implementations Revisited**
+
+Given that your package is part of a Next.js monorepo without React components, here are refined examples:
+
+#### **a. Safe Action Example for Server-Side**
+
+```typescript
+// src/actions/someAction.ts
+import { createSafeActionClient } from 'next-safe-action';
+import { z } from 'zod';
+import type { ActionResponse } from '@/types/actions';
+
+const schema = z.object({
+  value: z.string(),
+});
+
+export const someAction = createSafeActionClient()
+  .schema(schema)
+  .action(async (input): Promise<ActionResponse> => {
+    try {
+      // Action logic here
+      const result = await performSomeAction(input.value);
+      return { success: true, data: result };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof AppError ? error.message : 'Unexpected error',
+      };
+    }
+  });
+
+async function performSomeAction(value: string): Promise<any> {
+  // Implement the action's logic here
+  return { processedValue: value.toUpperCase() };
+}
+```
+
+#### **b. API Route Example**
+
+```typescript
+// src/pages/api/process.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { someAction } from '@/actions/someAction';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    const response = await someAction(req.body);
+    if (response.success) {
+      res.status(200).json(response.data);
+    } else {
+      res.status(400).json({ error: response.error });
+    }
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}
+```
+
+#### **c. Service Example**
+
+```typescript
+// src/services/apiClient.ts
+import axios from 'axios';
+
+const apiClient = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  timeout: 1000,
+});
+
+export async function fetchUser(userId: string) {
+  const response = await apiClient.get(`/users/${userId}`);
+  return response.data;
+}
+```
+
+### **22. Additional Considerations**
+
+#### **a. Dependency Injection**
+- **Manage Dependencies:** Use dependency injection to manage and test dependencies, enhancing modularity and testability.
+
+  ```typescript
+  // src/services/userService.ts
+  import { ApiClient } from '@/services/apiClient';
+
+  export class UserService {
+    constructor(private apiClient: ApiClient) {}
+
+    async getUser(userId: string) {
+      return this.apiClient.fetchUser(userId);
+    }
+  }
+  ```
+
+#### **b. Configuration Management**
+- **Centralized Configuration:** Maintain centralized configuration files for managing application settings, making it easier to manage different environments.
+
+  ```typescript
+  // src/config/index.ts
+  export const config = {
+    apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+    databaseUrl: process.env.DATABASE_URL || 'postgres://localhost:5432/mydb',
+    // Add other configuration settings here
+  };
+  ```
+
+#### **c. Dependency Injection Example**
+
+```typescript
+// src/index.ts
+import { UserService } from '@/services/userService';
+import { apiClient } from '@/services/apiClient';
+
+const userService = new UserService(apiClient);
+
+export { userService };
+```

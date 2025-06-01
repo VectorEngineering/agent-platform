@@ -1,0 +1,45 @@
+{
+    "name": "@dub/embed-core",
+    "description": "Vanilla JS core script that embeds Dub's referral dashboard.",
+    "version": "0.0.2",
+    "sideEffects": false,
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist/**"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "lint": "eslint src/",
+        "dev": "tsup --watch",
+        "check-types": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@dub/platform-config": "workspace:*",
+        "@floating-ui/dom": "^1.6.12"
+    },
+    "devDependencies": {
+        "@types/js-cookie": "^3.0.6",
+        "@playbookmedia/tsconfig": "workspace:*",
+        "tsup": "^6.1.3",
+        "typescript": "^5.1.6"
+    },
+    "author": "Yoan Yomba <yoanyomba@solomon-ai.co>",
+    "homepage": "https://app.thinkthank.io",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/steven-tey/dub.git"
+    },
+    "bugs": {
+        "url": "https://github.com/steven-tey/dub/issues"
+    },
+    "keywords": [
+        "dub",
+        "dub.co",
+        "ui"
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
+}

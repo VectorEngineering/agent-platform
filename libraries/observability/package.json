@@ -1,0 +1,20 @@
+{
+    "name": "@playbookmedia/observability",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@logtail/next": "^0.1.7",
+        "@playbookmedia/env": "workspace:*",
+        "@sentry/nextjs": "^8.42.0",
+        "react": "^19.0.0"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "^19.0.1",
+        "typescript": "^5.7.2"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

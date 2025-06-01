@@ -1,0 +1,13 @@
+{
+    "name": "@playbookmedia/loops",
+    "version": "0.0.0",
+    "main": "src/index.ts",
+    "dependencies": {
+        "loops": "^3.4.0"
+    },
+    "devDependencies": {
+        "@types/node": "22.8.6",
+        "@playbookmedia/tsconfig": "workspace:*",
+        "typescript": "5.6.3"
+    }
+}

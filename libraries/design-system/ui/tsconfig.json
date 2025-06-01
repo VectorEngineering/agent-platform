@@ -1,0 +1,16 @@
+{
+    "extends": "@playbookmedia/tsconfig/react-library.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@playbookmedia/ui": ["./src/index.tsx"],
+            "@/components/*": ["./src/components/*"],
+            "@/providers/*": ["./src/providers/*"],
+            "@/hooks/*": ["./src/hooks/*"],
+            "@/utils/*": ["./src/utils/*"],
+            "@/types": ["./src/types"]
+        }
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["storybook-static", "node_modules", "dist", "build"]
+}

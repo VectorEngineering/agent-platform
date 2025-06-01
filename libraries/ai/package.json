@@ -1,0 +1,31 @@
+{
+    "name": "@playbookmedia/ai",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "test": "NODE_OPTIONS='--experimental-vm-modules' vitest",
+        "test:watch": "NODE_OPTIONS='--experimental-vm-modules' vitest watch",
+        "coverage": "NODE_OPTIONS='--experimental-vm-modules' vitest run --coverage"
+    },
+    "dependencies": {
+        "@ai-sdk/openai": "^1.0.7",
+        "@playbookmedia/env": "workspace:*",
+        "ai": "^4.0.13",
+        "react": "^19.0.0",
+        "react-markdown": "^9.0.1",
+        "tailwind-merge": "^2.5.5"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "^19.0.1",
+        "@testing-library/jest-dom": "^6.4.3",
+        "@testing-library/react": "^14.2.6",
+        "@vitejs/plugin-react": "^4.2.1",
+        "jsdom": "^24.0.0",
+        "vitest": "^1.6.0"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

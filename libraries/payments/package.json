@@ -1,0 +1,16 @@
+{
+    "name": "@playbookmedia/payments",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@playbookmedia/env": "workspace:*",
+        "@stripe/agent-toolkit": "^0.2.0",
+        "stripe": "^17.4.0"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "typescript": "^5.7.2"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

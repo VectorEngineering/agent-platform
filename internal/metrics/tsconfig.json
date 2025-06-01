@@ -1,8 +1,8 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@playbookmedia/tsconfig/base.json",
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "outDir": "dist"
-  }
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@playbookmedia/tsconfig/base.json",
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "outDir": "dist"
+    }
 }

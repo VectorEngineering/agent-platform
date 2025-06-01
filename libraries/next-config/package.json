@@ -1,0 +1,20 @@
+{
+    "name": "@playbookmedia/next-config",
+    "version": "0.0.0",
+    "private": true,
+    "devDependencies": {
+        "@playbookmedia/env": "workspace:*",
+        "@playbookmedia/tsconfig": "workspace:*",
+        "next": "15.0.4"
+    },
+    "dependencies": {
+        "@logtail/next": "^0.1.7",
+        "@next/bundle-analyzer": "^15.0.4",
+        "@prisma/nextjs-monorepo-workaround-plugin": "^6.0.1",
+        "@sentry/nextjs": "^8.42.0",
+        "@vercel/toolbar": "^0.1.27",
+        "next-secure-headers": "^2.2.0"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "@playbookmedia/storage",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@vercel/blob": "^0.27.0"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

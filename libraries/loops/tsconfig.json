@@ -1,0 +1,5 @@
+{
+    "extends": "@playbookmedia/tsconfig/base.json",
+    "exclude": ["node_modules", "**/.svelte2tsx-language-server-files/**"],
+    "compilerOptions": {}
+}

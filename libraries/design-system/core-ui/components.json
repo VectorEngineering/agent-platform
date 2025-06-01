@@ -1,0 +1,19 @@
+{
+    "$schema": "https://ui.shadcn.com/schema.json",
+    "style": "new-york",
+    "rsc": true,
+    "tsx": true,
+    "tailwind": {
+        "config": "../tailwind-config/config.ts",
+        "css": "styles/globals.css",
+        "baseColor": "neutral",
+        "cssVariables": true
+    },
+    "aliases": {
+        "components": "@playbookmedia/design-system/components",
+        "utils": "@playbookmedia/design-system/lib/utils",
+        "hooks": "@playbookmedia/design-system/hooks",
+        "lib": "@playbookmedia/design-system/lib",
+        "ui": "@playbookmedia/design-system/components/ui"
+    }
+}

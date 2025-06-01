@@ -1,0 +1,21 @@
+{
+    "name": "@playbookmedia/email",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@react-email/components": "0.0.30",
+        "@playbookmedia/env": "workspace:*",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "resend": "^4.0.1"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "^19.0.1",
+        "typescript": "^5.7.2"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

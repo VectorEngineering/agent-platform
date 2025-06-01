@@ -1,0 +1,15 @@
+{
+    "name": "@playbookmedia/security",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@arcjet/next": "1.0.0-alpha.34",
+        "@playbookmedia/env": "workspace:*"
+    },
+    "devDependencies": {
+        "@playbookmedia/tsconfig": "workspace:*",
+        "typescript": "^5.7.2"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

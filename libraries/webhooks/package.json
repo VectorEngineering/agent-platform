@@ -1,0 +1,16 @@
+{
+    "name": "@playbookmedia/webhooks",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@playbookmedia/auth": "workspace:*",
+        "@playbookmedia/env": "workspace:*",
+        "svix": "^1.43.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.7.2",
+        "@playbookmedia/tsconfig": "workspace:*"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

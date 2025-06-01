@@ -1,0 +1,8 @@
+{
+    "extends": "@playbookmedia/tsconfig/react-library.json",
+    "compilerOptions": {
+        "baseUrl": "."
+    },
+    "include": ["./src/*.tsx"],
+    "exclude": ["node_modules"]
+}

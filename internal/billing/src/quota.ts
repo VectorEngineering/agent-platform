@@ -266,6 +266,6 @@ export type QuotaUsage = {
     [K in keyof QuotaLimits]: QuotaLimits[K] extends number
         ? number
         : QuotaLimits[K] extends object
-          ? { [P in keyof QuotaLimits[K]]: number }
-          : never
+        ? { [P in keyof QuotaLimits[K]]: number }
+        : never
 }

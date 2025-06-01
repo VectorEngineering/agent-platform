@@ -1,0 +1,20 @@
+{
+    "name": "@playbookmedia/feature-flags",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@playbookmedia/auth": "workspace:*",
+        "@playbookmedia/analytics": "workspace:*",
+        "@playbookmedia/design-system": "workspace:*",
+        "@vercel/flags": "^2.6.3"
+    },
+    "peerDependencies": {
+        "next": "15.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.7.2",
+        "@playbookmedia/tsconfig": "workspace:*"
+    },
+    "author": "Yoan Yomba",
+    "license": "MIT"
+}

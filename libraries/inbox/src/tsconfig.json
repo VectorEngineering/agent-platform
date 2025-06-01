@@ -1,0 +1,13 @@
+{
+    "extends": "@playbookmedia/tsconfig/base.json",
+    "compilerOptions": {
+        "incremental": true,
+        "tsBuildInfoFile": ".tsbuildinfo",
+        "noImplicitAny": false,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["**/*.ts", "**/*.js"]
+}
