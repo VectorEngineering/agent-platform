@@ -1,18 +1,5 @@
 {
-  "extends": ["plugin:prettier/recommended"],
-  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "bracketSpacing": true,
-        "semi": true,
-        "trailingComma": "all",
-        "printWidth": 80,
-        "tabWidth": 2,
-        "endOfLine": "auto"
-      }
-    ],
     "svg-jsx/camel-case-dash": "error",
     "svg-jsx/camel-case-colon": "error",
     "svg-jsx/no-style-string": "error",

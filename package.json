@@ -32,7 +32,11 @@
         "lint-fix": "pnpm lint --fix",
         "quick": "pretty-quick --staged",
         "postinstall": "husky install",
-        "migration:create": "pnpm typeorm migration:create"
+        "migration:create": "pnpm typeorm migration:create",
+        "db:setup": "cd apps/prospector && pnpm db:up && echo 'DATABASE_URL=\"postgresql://prospector:prospector123@localhost:5432/prospector\"' > .env.local && cd ../.. && echo 'DATABASE_URL=\"postgresql://prospector:prospector123@localhost:5432/prospector\"' > .env.local && pnpm prisma:migrate && pnpm prisma:generate",
+        "db:setup:prospector": "cd apps/prospector && pnpm db:up && echo 'DATABASE_URL=\"postgresql://prospector:prospector123@localhost:5432/prospector\"' > .env.local && pnpm prisma:migrate && pnpm prisma:generate",
+        "build:prospector": "cd apps/www-prospector && pnpm build",
+        "build:no-db": "turbo run build --filter='!@playbookmedia/prospector'"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,json,md}": "eslint --fix"
