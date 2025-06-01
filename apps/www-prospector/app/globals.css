@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+/* Neutral, professional color palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    /* Refined primary colors */
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Card and UI elements */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Subtle secondary colors */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted elements */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    /* Accent colors */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+
+    /* System states */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 72% 29%;
+    --success-foreground: 210 40% 98%;
+
+    /* Border and input styles */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 47% 11%;
+
+    /* Modern radius */
+    --radius: 0.5rem;
+
+    /* Sidebar theme */
+    --sidebar-width: 240px;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-muted: 215.4 16.3% 46.9%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+  }
+
+  .dark {
+    /* Dark mode - deep, rich colors */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+
+    --info: 214 95% 53%;
+    --info-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    /* Dark mode chart colors - vibrant */
+    --chart-1: 262 83% 58%;
+    --chart-2: 221 83% 53%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 31 97% 63%;
+    --chart-5: 355 78% 56%;
+
+    /* Dark sidebar theme */
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  }
+
+  /* Modern typography scale */
+  h1 {
+    @apply text-4xl font-semibold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Modern UI utilities */
+  .sidebar {
+    @apply fixed top-0 left-0 z-40 h-screen transition-transform;
+    width: var(--sidebar-width);
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-2 px-4 py-2 text-sidebar-foreground/80 hover:bg-sidebar-background/80 hover:text-sidebar-foreground transition-colors rounded-md;
+  }
+
+  /* .sidebar-item.active {
+    @apply bg-sidebar-background/90 text-sidebar-foreground font-medium;
+  } */
+
+  /* Clean shadows */
+  .shadow-soft {
+    @apply shadow-[0_1px_3px_0_rgb(0,0,0,0.05)];
+  }
+
+  .shadow-card {
+    @apply shadow-[0_1px_2px_-1px_rgba(0,0,0,0.05),0_1px_3px_0_rgba(0,0,0,0.05)];
+  }
+
+  /* Modern glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  }
+
+  .dark .glass {
+    @apply bg-zinc-900/80 border-white/10;
+  }
+
+  .glass-hover {
+    @apply hover:bg-background/60 hover:backdrop-blur-lg transition-all duration-300;
+  }
+
+  /* Modern shadows */
+  .shadow-subtle {
+    @apply shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)];
+  }
+
+  /* Gradient text utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-info to-primary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+/* Scrollbar styling */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 block;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary/50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/30 transition-colors;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* React Flow customization */
+.react-flow__attribution {
+  @apply !bg-transparent;
+}
+
+.dark .react-flow__controls-button {
+  @apply !bg-accent;
+}
+
+/* Modern card effect */
+.card-holo {
+  @apply relative overflow-hidden;
+  &::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-300;
+  }
+  &:hover::before {
+    @apply opacity-100;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scroll snap utilities */
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.scroll-snap-item {
+  scroll-snap-align: start;
+}
+
+
+/* Panel transitions */
+.panel-enter {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.panel-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.panel-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.panel-exit-active {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Custom selection color */
+::selection {
+  @apply bg-primary/10 text-primary;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary/50;
+}
