@@ -1,27 +1,28 @@
-import passport from 'passport'
-import { VerifiedCallback } from 'passport-jwt'
-import express, { NextFunction, Request, Response } from 'express'
 import { ErrorMessage, IAssignedWorkspace, LoggedInUser } from '../../Interface.Enterprise'
-import { decryptToken, encryptToken, generateSafeCopy } from '../../utils/tempTokenUtils'
-import jwt, { JwtPayload, sign } from 'jsonwebtoken'
-import { getAuthStrategy } from './AuthStrategy'
-import { IdentityManager } from '../../../IdentityManager'
-import { HttpStatusCode } from 'axios'
-import { getRunningExpressApp } from '../../../utils/getRunningExpressApp'
-import session from 'express-session'
-import { OrganizationService } from '../../services/organization.service'
-import { AccountService } from '../../services/account.service'
-import { WorkspaceUser, WorkspaceUserStatus } from '../../database/entities/workspace-user.entity'
-import { RoleErrorMessage, RoleService } from '../../services/role.service'
-import { GeneralRole } from '../../database/entities/role.entity'
-import { RedisStore } from 'connect-redis'
-import { WorkspaceUserService } from '../../services/workspace-user.service'
 import { OrganizationUserErrorMessage, OrganizationUserService } from '../../services/organization-user.service'
+import { RoleErrorMessage, RoleService } from '../../services/role.service'
+import { WorkspaceUser, WorkspaceUserStatus } from '../../database/entities/workspace-user.entity'
+import { decryptToken, encryptToken, generateSafeCopy } from '../../utils/tempTokenUtils'
+import express, { NextFunction, Request, Response } from 'express'
+import { initializeDBClientAndStore, initializeRedisClientAndStore } from './SessionPersistance'
+import jwt, { JwtPayload, sign } from 'jsonwebtoken'
+
+import { AccountService } from '../../services/account.service'
+import { GeneralRole } from '../../database/entities/role.entity'
+import { HttpStatusCode } from 'axios'
+import { IdentityManager } from '../../../IdentityManager'
 import { InternalFlowiseError } from '../../../errors/internalFlowiseError'
-import { StatusCodes } from 'http-status-codes'
+import { OrganizationService } from '../../services/organization.service'
 import { OrganizationUserStatus } from '../../database/entities/organization-user.entity'
 import { Platform } from '../../../Interface'
-import { initializeDBClientAndStore, initializeRedisClientAndStore } from './SessionPersistance'
+import { RedisStore } from 'connect-redis'
+import { StatusCodes } from 'http-status-codes'
+import { VerifiedCallback } from 'passport-jwt'
+import { WorkspaceUserService } from '../../services/workspace-user.service'
+import { getAuthStrategy } from './AuthStrategy'
+import { getRunningExpressApp } from '../../../utils/getRunningExpressApp'
+import passport from 'passport'
+import session from 'express-session'
 
 const localStrategy = require('passport-local').Strategy
 
@@ -366,7 +367,7 @@ export const generateJwtRefreshToken = (user: any) => {
 const _generateJwtToken = (user: Partial<LoggedInUser>, expiryInMinutes: number, secret: string) => {
     const encryptedUserInfo = encryptToken(user?.id + ':' + user?.activeWorkspaceId)
     return sign({ id: user?.id, username: user?.name, meta: encryptedUserInfo }, secret!, {
-        expiresIn: expiryInMinutes + 'm', // Expiry in minutes
+        expiresIn: `${expiryInMinutes}m`, // Expiry in minutes
         notBefore: '0', // Cannot use before now, can be configured to be deferred.
         algorithm: 'HS256', // HMAC using SHA-256 hash algorithm
         audience: jwtAudience, // The audience of the token

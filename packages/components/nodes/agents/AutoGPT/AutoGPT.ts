@@ -1,13 +1,14 @@
-import { flatten } from 'lodash'
-import { Tool, StructuredTool } from '@langchain/core/tools'
-import { BaseChatModel } from '@langchain/core/language_models/chat_models'
 import { AIMessage, HumanMessage, SystemMessage } from '@langchain/core/messages'
-import { VectorStoreRetriever } from '@langchain/core/vectorstores'
-import { PromptTemplate } from '@langchain/core/prompts'
-import { AutoGPT } from 'langchain/experimental/autogpt'
-import { LLMChain } from 'langchain/chains'
 import { INode, INodeData, INodeParams } from '../../../src/Interface'
-import { checkInputs, Moderation } from '../../moderation/Moderation'
+import { Moderation, checkInputs } from '../../moderation/Moderation'
+import { StructuredTool, Tool } from '@langchain/core/tools'
+
+import { AutoGPT } from 'langchain/experimental/autogpt'
+import { BaseChatModel } from '@langchain/core/language_models/chat_models'
+import { LLMChain } from 'langchain/chains'
+import { PromptTemplate } from '@langchain/core/prompts'
+import { VectorStoreRetriever } from '@langchain/core/vectorstores'
+import { flatten } from 'lodash'
 import { formatResponse } from '../../outputparsers/OutputParserHelpers'
 
 type ObjectTool = StructuredTool
@@ -144,13 +145,13 @@ class AutoGPT_Agents implements INode {
                     executor.fullMessageHistory.push(new AIMessage(assistantReply))
 
                     const action = await executor.outputParser.parse(assistantReply)
-                    const tools = executor.tools.reduce((acc, tool) => ({ ...acc, [tool.name]: tool }), {} as { [key: string]: ObjectTool })
+                    const tools = executor.tools.reduce((acc, tool) => ({ ...acc, [tool.name]: tool }), {} as Record<string, any>)
                     if (action.name === FINISH_NAME) {
                         return action.args.response
                     }
                     let result: string
                     if (action.name in tools) {
-                        const tool = tools[action.name]
+                        const tool = tools[action.name] as any
                         let observation
                         try {
                             observation = await tool.call(action.args)
